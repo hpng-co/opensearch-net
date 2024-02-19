@@ -90,6 +90,7 @@ namespace OpenSearch.Client
 		public const string RefreshInterval = "index.refresh_interval";
 
 		public const string DefaultPipeline = "index.default_pipeline";
+		public const string Knn = "index.knn";
 		public const string FinalPipeline = "index.final_pipeline";
 
 		public const string RequestsCacheEnable = "index.requests.cache.enable";

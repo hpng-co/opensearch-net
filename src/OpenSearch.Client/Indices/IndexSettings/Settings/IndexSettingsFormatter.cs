@@ -79,6 +79,7 @@ namespace OpenSearch.Client
 			Set(NumberOfReplicas, value.NumberOfReplicas);
 			Set(RefreshInterval, value.RefreshInterval);
 			Set(DefaultPipeline, value.DefaultPipeline);
+			Set(Knn, value.Knn);
 			Set(FinalPipeline, value.FinalPipeline);
 			Set(BlocksReadOnly, value.BlocksReadOnly);
 			Set(BlocksRead, value.BlocksRead);
@@ -210,6 +211,7 @@ namespace OpenSearch.Client
 			Set<bool?>(s, settings, BlocksReadOnlyAllowDelete, v => s.BlocksReadOnlyAllowDelete = v, formatterResolver);
 			Set<int?>(s, settings, Priority, v => s.Priority = v, formatterResolver);
 			Set<string>(s, settings, DefaultPipeline, v => s.DefaultPipeline = v, formatterResolver);
+			Set<bool?>(s, settings, Knn, v => s.Knn = v, formatterResolver);
 			Set<string>(s, settings, FinalPipeline, v => s.FinalPipeline = v, formatterResolver);
 
 			Set<Union<int, RecoveryInitialShards>>(s, settings, UpdatableIndexSettings.RecoveryInitialShards,

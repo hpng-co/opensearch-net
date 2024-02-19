@@ -140,6 +140,8 @@ namespace OpenSearch.Client
 		/// </summary>
 		string DefaultPipeline { get; set; }
 
+		bool? Knn { get; set; }
+
 		/// <summary>
 		/// The final ingest pipeline for this index. Index requests will fail if the final pipeline is set and the pipeline does not exist.
 		/// The final pipeline always runs after the request pipeline (if specified) and the default pipeline (if it exists). The special pipeline
@@ -222,6 +224,9 @@ namespace OpenSearch.Client
 		/// <inheritdoc cref="IDynamicIndexSettings.DefaultPipeline" />
 		public string DefaultPipeline { get; set; }
 
+		/// <inheritdoc cref="IDynamicIndexSettings.Knn" />
+		public bool? Knn { get; set; }
+
 		/// <inheritdoc cref="IDynamicIndexSettings.FinalPipeline" />
 		public string FinalPipeline { get; set; }
 
@@ -258,6 +263,9 @@ namespace OpenSearch.Client
 
 		/// <inheritdoc cref="IDynamicIndexSettings.DefaultPipeline" />
 		public TDescriptor DefaultPipeline(string defaultPipeline) => Assign(defaultPipeline, (a, v) => a.DefaultPipeline = v);
+
+		/// <inheritdoc cref="IDynamicIndexSettings.Knn" />
+		public TDescriptor Knn(bool? knn) => Assign(knn, (a, v) => a.Knn = v);
 
 		/// <inheritdoc cref="IDynamicIndexSettings.FinalPipeline" />
 		public TDescriptor FinalPipeline(string finalPipeline) => Assign(finalPipeline, (a, v) => a.FinalPipeline = v);
