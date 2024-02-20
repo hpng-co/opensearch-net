@@ -9,9 +9,9 @@
       responses. Uses and exposes OpenSearch.Net.
     </Description>
     <RepositoryUrl>https://github.com/hpng-co/opensearch-net</RepositoryUrl>
-    <PackageVersion>2.0.0-hpng0001</PackageVersion>
+    <PackageVersion>1.6.1-hpng0001</PackageVersion>
   </PropertyGroup>
-  
+
   <PropertyGroup>
     <IsPackable>true</IsPackable>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
